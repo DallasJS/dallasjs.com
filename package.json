@@ -1,29 +1,32 @@
 {
 	"name": "DallasJS",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"author": "DallasJS",
 	"description": "Website for the DallasJS meetup",
 	"contributors": [
 		{
 			"name": "Alexis Abril",
-			"email": "alexis@bitovi.com"
+			"email": "alexis@aquil.io"
 		}
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexisabril/dallasjs.com.git"
+		"url": "https://github.com/dallasjs/dallasjs.com.git"
 	},
-	"dependencies" : {
-		"express": "3.3.5"
+	"dependencies": {
+		"@feathersjs/errors": "^3.3.6",
+		"feedparser": "^2.2.9",
+		"open-graph-scraper": "^3.6.2",
+		"request": "^2.88.0"
 	},
 	"devDependencies": {
-		"bower": "1.2.1",
-		"grunt-cli": "0.1.6",
-		"grunt": "0.4.1",
-		"mocha": "1.12.0"
+		"netlify-lambda": "^1.5.1"
 	},
 	"license": "MIT",
 	"engines": {
-		"node": ">=0.10"
+		"node": "10"
+	},
+	"scripts": {
+		"build": "netlify-lambda build functions"
 	}
 }
